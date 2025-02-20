@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="{% static 'almuerzo.css' %}">
+
+<body>
+
+    <div class="container">
+        <h1>Deléitate con un delicioso almuerzo</h1>
+
+        <div class="almuerzo">
+            <div class="days">
+                <div class="day">
+                    <h3>Lunes</h3>
+                    <img src="{% static 'img/lunes.jpeg' %}" alt="Almuerzo del lunes">
+                </div>
+                <div class="day">
+                    <h3>Martes</h3>
+                    <img src="imagen-martes.jpg" alt="Almuerzo del martes">
+                </div>
+                <div class="day">
+                    <h3>Miércoles</h3>
+                    <img src="{% static 'img/miercoles.jpeg' %}" alt="Almuerzo del miércoles">
+                </div>
+                <div class="day">
+                    <h3>Jueves</h3>
+                    <img src="imagen-jueves.jpg" alt="Almuerzo del jueves">
+                </div>
+                <div class="day">
+                    <h3>Viernes</h3>
+                    <img src="imagen-viernes.jpg" alt="Almuerzo del viernes">
+                </div>
+                <div class="day">
+                    <h3>Sábado</h3>
+                    <img src="imagen-sabado.jpg" alt="Almuerzo del sábado">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="boton-item">Agregar al carrito</button>
+
+</body>
+
+
+
+
+
+
+{% endblock %}

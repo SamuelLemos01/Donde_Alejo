@@ -1,0 +1,56 @@
+
+.mission-vision {
+    padding: 3rem 1rem;
+    background: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.content {
+    flex: 1 1 45%;
+    min-width: 300px;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.805);
+    text-align: center;
+}
+
+.content h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.map-container {
+    margin-top: 1rem;
+    width: 90%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    border-radius: 10px;
+    border: none;
+}
+
+.map-section h2 {
+    text-align: center;
+    margin-bottom: 1rem; 
+    color: #000000; 
+    font-size: 1.8rem; 
+}

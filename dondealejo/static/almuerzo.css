@@ -1,0 +1,57 @@
+body {
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+h1 {
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+    padding: 40px;
+}
+.almuerzo {
+    background-color: #743206;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+.almuerzo h3 {
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+}
+.days {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.day {
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.day img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.boton-item {
+    background-color: #743206;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.boton-item:hover {
+    background-color: #5a2704;
+}

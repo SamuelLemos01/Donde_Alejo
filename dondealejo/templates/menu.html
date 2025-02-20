@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Menu{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="{% static 'menu.css' %}">
+
+<main>
+    <section class="menu-section">
+        <div class="menu-items">
+            {% for product in products %}
+                <div class="menu-item">
+                    <img src="{{ product.imagen.url }}" alt="{{ product.nombre }}">
+                    <h3>{{ product.nombre }}</h3>
+                    <p>{{ product.descripcion }}</p>
+                    <span class="price">${{ product.precio }}</span>
+                    <br><br>
+                    <button class="order-btn" onclick="makeOrder('{{ product.name }}')">Hacer Pedido</button>
+                    <br><br>
+                    <button class="boton-item">Agregar al carrito</button>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+
+{% endblock %}

@@ -1,0 +1,133 @@
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    width: 100%;
+    height: 50%;
+    background: #743206;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.668)
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    height: 130px;
+    width: auto;
+    border-radius: 90px;
+    /* box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.88)
+     */
+}
+
+
+.nav {
+    list-style: none;
+    padding: 30px;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-section {
+    margin: 2rem 0;
+    text-align: center;
+    padding: 50px;
+}
+
+.menu-section h2 {
+    font-size: 1.8rem;
+    color: #743206;
+    margin-bottom: 1rem;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    width: 300px;
+}
+
+.menu-item img {
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border-radius: 800px;
+}
+
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.menu-item .price {
+    font-size: 1.2rem;
+    color: #743206;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+.order-btn {
+    background-color: #743206;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #5a2704;
+}
+
+.boton-item {
+    background-color: #743206;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.boton-item:hover {
+    background-color: #5a2704;
+}

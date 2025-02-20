@@ -1,0 +1,93 @@
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+<link rel="stylesheet" href="{% static 'cafeteria.css' %}">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<body>
+    <header class="registro">
+        <div class="contenido">
+            <img src="{% static 'img/logo2.png'%}" alt="Restaurante Delicioso" class="logo">
+            <h1 class="uno">Bienvenido a nuestro restaurante</h1>
+            <p class="dos">Únete a nuestra comunidad y descubre todas las ventajas que tenemos para ti.</p>
+            <br>
+            
+            <br>
+            <a class="btn-register" onclick="location" href="{% url 'login' %}">Regístrate Ahora</a>
+            
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="cafeteria">
+        <br>
+        <br>
+        <div class="contenido_imagenes">
+            <img src="{% static 'img/pastelitos_pollo.jpeg' %}" alt="Menú Cafetería Donde Alejo">
+            <img src="{% static 'img/cafeteria.jpeg' %}" alt="Menú Cafetería Donde Alejo">
+            <img src="{% static 'img/pastelitos_queso.jpeg' %}" alt="Menú Cafetería Donde Alejo">
+        </div>
+        
+        <h2>Cafetería Donde Alejo</h2>
+        <p>Haz tu pedido y disfruta de nuestros deliciosos productos.</p>
+        <a href="https://wa.me/573124533122?text=Hola,%20quiero%20hacer%20un%20pedido%20a%20Cafetería%20Donde%20Alejo" target="_blank" class="btn-pedido">
+          Hacer Pedido
+        </a>
+        <br>
+        <br>
+    </div>
+    
+<!-- 
+
+    <section id="contacto" class="contact-section">
+        <h2>contacto</h2>
+        <form id="contact-form" method="POST" action="/send_email">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="correo" placeholder="Correo_Electrónico" required>
+            <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section> -->
+
+</body>
+
+<footer>
+    <div class="caja">
+        <h3>Donde Alejo</h3>
+        <p class="footer-description">Sabor que inspira, tradición que une.</p>
+        <div class="footer-contact">
+            <p>📍 Calle 9 #9-20 - Barrio el centro</p>
+            <p>📞 312 453 3122</p>
+        </div>
+    </div>
+
+    <div class="caja">
+        <h4>Horarios:</h4>
+        <p>Lunes a Viernes: 8:00 AM - 9:00 PM</p>
+        <p>Sábados y Domingos: 12:00 PM - 11:00 PM</p>
+    </div>
+
+    <div class="caja_logos">
+        <h4>Síguenos:</h4>
+        <a href="https://www.facebook.com/alejochaux0106" target="_blank"> <img src="{% static 'img/facebook.png' %}"></a>
+        <a href="https://www.instagram.com/stopdondealejo?igsh=MWt1OWhsaXZ4cWF1" target="_blank"><img src="{% static 'img/instagram.png' %}"></a>  
+        <a href="https://Wa.me/573124533122" target="_blank"><img src="{% static 'img/whatsapp.png' %}" ></a>
+    </div>
+</footer> 
+<!-- <div class="description">
+    <div class="uno1">
+        <img src="{% static 'img/alejo.jpeg'%}" alt="Imagen 2">
+        <p>Fundado en el año 2022, Donde Alejo se ha convertido en un rincón culinario único, donde la tradición y la creatividad se fusionan para ofrecer experiencias gastronómicas memorables. Con una pasión por los sabores auténticos y una visión moderna de la cocina, este restaurante destaca por su compromiso con la calidad, la frescura de sus ingredientes, y la atención al detalle.</p>
+    </div>
+</div> -->
+
+{% endblock %}

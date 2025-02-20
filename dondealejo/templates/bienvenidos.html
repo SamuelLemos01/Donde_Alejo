@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'restaurante.css' %}">
+
+<div class="welcome_container">
+    <div class="contenedor">
+        <div class="text-content">
+            <h1>Bienvenidos al restaurante Donde Alejo</h1>
+            <p>Disfruta de una experiencia culinaria única, donde el sabor y la tradición se combinan para deleitar tus sentidos. 
+        Nuestro restaurante te espera con una selección de los mejores platillos preparados con ingredientes frescos y mucho amor.</p>
+        </div>
+        <div class="image-container">
+            <img src="{% static 'img/alejo.jpeg' %}" alt="Chef sirviendo un plato delicioso">
+        </div>
+    </div>
+</div>
+{% endblock %}

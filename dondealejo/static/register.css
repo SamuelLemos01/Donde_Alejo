@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+
+body {
+    /* background-color: rgb(255, 255, 255);  */
+    background: linear-gradient(45deg, #a85a00c9,#ffffffc0 );  
+    /* background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)), url('/static/img/fondo-login.jpg'); 
+	background-size: 100% 100%;
+	background-repeat: no-repeat;  */
+}
+main {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* .caja {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco con transparencia */
+    /* padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde semitransparente */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    /* width: 400px;
+    text-align: center;
+} */
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dddddd93;;
+    border-radius: 5px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container input[type="password"] {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.password-container .fas {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #703100;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ffae00;
+    color: rgb(0, 0, 0);
+    transform: scale(1.0);
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+}
+
+a {
+    color: rgb(0, 26, 255);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

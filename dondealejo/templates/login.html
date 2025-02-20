@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <main>
+        {% block content %}
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <div>
+                <h2>Inicio de Sesión</h2>
+
+            {% if messages %}
+
+                <div class="messages">
+                    {% for messages in messages %}
+                        <div class="{{ message.tags }}">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <input type="text" name="username" placeholder="Usuario" required>
+            <br>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <br>
+            <br>
+            <button type="submit">Ingresar</button>
+            <br>
+            <p>¿No tienes cuenta?    <a href="{% url 'register' %}">Regístrate aquí</a></p>
+            </div>
+        </form>
+    {% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Cerrar sesion{% endblock %}
+{% block content %}
+{% load static %}
+
+<button class="btn-cerrar" onclick="cerrarSesion()">
+    <img src="cancelar.png" alt="Cerrar Sesión">
+  </button>
+
+  <script src="script.js"></script>
+
+{% endblock %}
