@@ -65,6 +65,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .menu-item {
@@ -73,16 +74,21 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     text-align: center;
-    width: 300px;
+    width: 400px;
+    height: 590px;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .menu-item img {
-    width: 90%;
+    
     border-radius: 10px;
-    margin-bottom: 1rem;
+    /* margin-bottom: 5rem; */
     border-radius: 800px;
 }
 
+.menu-item img {
+    width: 50%;
+}
 
 .menu-item h3 {
     font-size: 1.5rem;
@@ -108,7 +114,7 @@
     color: white;
     border: none;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
