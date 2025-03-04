@@ -24,34 +24,38 @@
          
         <nav>
                 <ul class="nav"> 
+                    
+                    <div class="navbar">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-custom dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                Menú
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'desayunos' %}">Desayunos</a></li>
+                                <li><a class="dropdown-item" href="{% url 'almuerzo' %}">Almuerzos</a></li>
+                                <li><a class="dropdown-item" href="{% url 'cafeteria' %}">Cafetería</a></li>
+                                <li><a class="dropdown-item" href="{% url 'productos' %}">Comidas Rápidas</a></li>
+                            </ul>
+                        </div>
+                        <a href="{% url 'quienes_somos' %}" >Quiénes somos</a> <br>
+                        <a href="{% url 'contacto' %}" >Contáctanos</a> <br>
+
+
+                        {% with total_items=request.user.carritoitem_set.count %}
+                        {% if total_items > 0 %}
+                        <a href="{% url 'ver_carrito' %}" class="icono-login">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="badge bg-danger">{{ total_items }}</span>
+                        </a>
             
-                <div class="dropdown">
-                    <button class="boton">Carta</button>
-                    <div class="dropdown-content">
-                        <a href="{% url 'almuerzo' %}">Almuerzos</a>
-                        <a href="{% url 'productos' %}">Comidas Rápidas</a>
+                        {% endif %}
+                    {% endwith %}
                     </div>
-                </div>
-                <li><a href="{% url 'quienes_somos' %}">Quienes somos</a></li> 
-                <!-- <li><a href="receta.html">Receta</a></li>  -->
-                <li><a href="{% url 'contacto' %}">Contáctanos</a></li> 
 
                 <!-- <a class="usuario" href="{% url 'login'%}">
                     <img id="cart-icon" src="{% static 'img/usuario.png' %}" alt="">
                 </a> -->
 
-                {% with total_items=request.user.carritoitem_set.count %}
-                {% if total_items > 0 %}
-                <a href="{% url 'ver_carrito' %}" class="icono-login">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span class="badge bg-danger">{{ total_items }}</span>
-                </a>
-    
-                {% endif %}
-            {% endwith %}
-                <a class="carrito" href="{% url 'home'%}">
-                    <img id="cart-icon" src="{% static 'img/cerrar.png' %}" alt="">
-                </a>
 
                 
             </ul>

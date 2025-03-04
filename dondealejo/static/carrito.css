@@ -73,15 +73,6 @@
     color: white;
 }
 
-.btn-danger {
-    background-color: #dc3545;
-    color: white;
-    border: 1px solid #dc3545;
-}
-
-.btn-danger:hover {
-    background-color: #bb2d3b;
-}
 
 .btn-secondary {
     background-color: var(--primario-oscuro);
@@ -150,6 +141,13 @@
     text-decoration: none;
     font-weight: bold;
 }
+
+
+.imagen img {
+    width: 120px;
+    height: 120px;
+}
+
 
 .alert {
     padding: 1rem;

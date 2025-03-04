@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% block title %}Cafeteria{% endblock %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'cafeteria.css' %}">
+
+<div class="cafeteria">
+  
+  <br>
+  <br>
+  <h2>Cafetería Donde Alejo</h2>
+  <br>
+  <br>
+  <div class="contenido_imagenes">
+    <img src="{% static 'img/cafeteria1.jpeg' %}" alt="Menú Cafetería Donde Alejo">
+    <img src="{% static 'img/cafeteria.jpeg' %}" alt="Menú Cafetería Donde Alejo">
+    <img src="{% static 'img/pollo.jpeg' %}" alt="Menú Cafetería Donde Alejo">
+  </div>
+  <br>
+ 
+  <p>Haz tu pedido y disfruta de nuestros deliciosos productos.</p>
+  <div class="contenedor-boton">
+    <a class="btn-domicilio" onclick="location" href="{% url 'domicilios' %}">📦 Pedir Domicilio</a>
+  </div>
+  <br>
+  <br>
+</div>
+
+<style>
+  .contenedor {
+  background: linear-gradient(45deg, #a85a00c9,#ffffffc0 );  
+  flex: 1;  /* Ocupa todo el espacio disponible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 150px 120px; 
+  }
+
+  .cafeteria {
+ 
+  text-align: center;
+
+  background: white;
+  padding: 40px;
+  padding: 20px 120px; 
+  /* border-radius: 50px; */
+  }
+
+  .contenido_imagenes {
+  display: flex; /* Organiza en fila */
+  justify-content: center; /* Centra las imágenes en la fila */
+  gap: 30px; /* Espacio entre imágenes */
+  }
+
+  .contenido_imagenes img {
+  width: 20%;
+  height: 20%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0);
+  transition: transform 0.3s ease-in-out;
+  }
+
+  img:hover {
+  transform: scale(1.1);
+  }
+
+  .cafeteria h2 {
+  font-size: 60px;
+  color: #000000;
+  margin-bottom: 10px;
+  font-weight: bold;
+  }
+
+  .cafeteria p {
+  font-size: 30px;
+  color: #000000;
+  }
+
+  .btn-pedido {
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff;
+  text-decoration: none;
+  /* padding: 10px 30px; */
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  }
+
+  .btn-pedido:hover {
+  background-color: #804000;
+  color: rgb(255, 255, 255);
+  }
+
+
+
+  .contenedor-boton {
+  display: flex;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;  /* Centra verticalmente si es necesario */
+  width: 100%; /* Asegura que el contenedor ocupa todo el ancho */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+.btn-domicilio {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 25px;
+  background-color: #A20000;
+  color: white;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-domicilio:hover {
+  background-color: #750000;
+  transform: scale(1.05);
+}
+</style>
+{% endblock %}

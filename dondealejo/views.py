@@ -178,13 +178,21 @@ def perfil (request):
 def bienvenidos (request):
     return render(request, 'bienvenidos.html')
 
-
 def almuerzo (request):
     return render(request, 'almuerzo.html')
+
+
+def desayunos (request):
+    return render(request, 'desayunos.html')
+
+
+def domicilios (request):
+    return render(request, 'domicilios.html')
     
 
 def cafeteria (request):
     return render(request, 'cafeteria.html')
+
 
 def quienes_somos (request):
     return render(request, 'quienes_somos.html')

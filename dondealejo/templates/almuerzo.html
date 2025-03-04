@@ -1,50 +1,140 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'style.css' %}">
-<link rel="stylesheet" href="{% static 'almuerzo.css' %}">
 
-<body>
+<link rel="stylesheet" href="{% static 'almuerzos.css' %}">
 
-    <div class="container">
-        <h1>Deléitate con un delicioso almuerzo</h1>
-
-        <div class="almuerzo">
-            <div class="days">
-                <div class="day">
-                    <h3>Lunes</h3>
-                    <img src="{% static 'img/lunes.jpeg' %}" alt="Almuerzo del lunes">
-                </div>
-                <div class="day">
-                    <h3>Martes</h3>
-                    <img src="{% static 'img/martes.jpeg' %}" alt="Almuerzo del martes">
-                </div>
-                <div class="day">
-                    <h3>Miércoles</h3>
-                    <img src="{% static 'img/miercoles (2).jpeg' %}" alt="Almuerzo del miércoles">
-                </div>
-                <div class="day">
-                    <h3>Jueves</h3>
-                    <img src="{% static 'img/jueves.jpeg' %}" alt="Almuerzo del jueves">
-                </div>
-                <div class="day">
-                    <h3>Viernes</h3>
-                    <img src="{% static 'img/viernes.jpeg' %}" alt="Almuerzo del viernes">
-                </div>
-                <div class="day">
-                    <h3>Sábado</h3>
-                    <img src="{% static 'img/sabado.jpeg' %}" alt="Almuerzo del sábado">
-                </div>
+<div class="container">
+    <link rel="stylesheet" href="{% static 'almuerzos.css' %}">
+    <br>
+    <br>
+    <h1 class="titulo">Deléitate con un delicioso almuerzo</h1>
+    <br>
+    <br>
+    <div class="almuerzo">
+        <div class="days">
+            <div class="day">
+                <h3>Lunes</h3>
+                <img src="{% static 'img/lunes.jpeg' %}" alt="Almuerzo del lunes">
+            </div>
+            <div class="day">
+                <h3>Martes</h3>
+                <img src="{% static 'img/martes.jpeg' %}" alt="Almuerzo del martes">
+            </div>
+            <div class="day">
+                <h3>Miércoles</h3>
+                <img src="{% static 'img/miercoles (2).jpeg' %}" alt="Almuerzo del miércoles">
+            </div>
+            <div class="day">
+                <h3>Jueves</h3>
+                <img src="{% static 'img/jueves.jpeg' %}" alt="Almuerzo del jueves">
+            </div>
+            <div class="day">
+                <h3>Viernes</h3>
+                <img src="{% static 'img/viernes.jpeg' %}" alt="Almuerzo del viernes">
+            </div>
+            <div class="day">
+                <h3>Sábado</h3>
+                <img src="{% static 'img/sabado.jpeg' %}" alt="Almuerzo del sábado">
             </div>
         </div>
     </div>
-    <button class="boton-item">Agregar al carrito</button>
+</div>
+<div class="button-container">
+    <a href="{% url 'domicilios' %}" class="btn-domicilio">📦Pedir Domicilio</a>
+</div>
 
-</body>
+<style>
+    .container {
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    padding: 40px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: 'Montserrat Alternates', sans-serif;
+} 
+
+.almuerzo {
+    display: flex;
+    justify-content: center;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Espaciado entre cajas */
+}
+
+.day {
+    background: #D2B48C;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    width: 400px;  /* Caja más grande */
+    height: 500px; /* Más altura para la imagen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 
+.day img {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 380px; /* Tamaño máximo */
+    height: 400px; /* Imagen más grande */
+    object-fit: cover; /* Ajuste sin deformación */
+    border-radius: 12px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
 
+.day h3 {
+    font-size: 1.8rem;
+    color: #000000;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
 
+.titulo {
+    font-weight: bold; 
+    font-size: 40px;
+    color: #000000; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
+/* Botón de pedido */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+    padding: 50px;
+}
 
+.btn-domicilio {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 25px;
+    background-color: #A20000;
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-domicilio:hover {
+    background-color: #750000;
+    transform: scale(1.05);
+}
+</style>
 {% endblock %}

@@ -8,6 +8,7 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'carrito.css' %}">
+<link rel="stylesheet" href="{% static 'style.css' %}">
 <div class="carrito-container">
     <h1 class="carrito-titulo">Tu Carrito de Compras</h1>
     
@@ -55,7 +56,10 @@
                         <td>${{ item.subtotal }}</td>
                         <td>
                             <a href="{% url 'eliminar_item' item.id %}" class="btn btn-danger btn-sm">
-                                Eliminar
+                                <div class="imagen">
+                                    <img src="{% static 'img/basura.gif' %}">
+                                </div>
+                                
                             </a>
                         </td>
                     </tr>

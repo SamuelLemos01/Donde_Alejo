@@ -15,7 +15,7 @@ body {
 .header {
     width: 100vw;
     height: 50%;
-    background: #753300;
+    background: #000000;
     color: #ffffff;
     padding: 1rem 0;
     box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.668)
@@ -58,7 +58,7 @@ body {
 }
 
 .nav a {
-    font-size: 1.0rem;
+    font-size: 1.2rem;
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
@@ -68,50 +68,6 @@ body {
 
 } */
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-    
-}
-
-.dropdown-btn {
-    background-color: #743206;
-    color: white;
-    font-family: 'Montserrat Alternates', sans-serif;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-
-.dropdown-content {
-    display: none; 
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: #000000; 
-    padding: 10px 15px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-    background-color: #743206; 
-    color: white;
-
-}
 
 
 .dropdown:hover .dropdown-content {
@@ -125,13 +81,46 @@ body {
 
 }
 
+.navbar {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+.btn-custom {
+    background-color: transparent !important; /* Fondo transparente */
+    color: white !important; /* Texto blanco */
+    border: none !important; /* Sin bordes */
+    padding: 8px 16px;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+
+
+/* Estilos del menú desplegable */
+.dropdown-menu {
+    background-color: white !important; /* Fondo blanco */
+    border-radius: 10px;
+}
+
+.dropdown-item {
+    color: black !important; /* Texto negro */
+}
+
+.dropdown-item:hover {
+    background-color: black !important; /* Fondo negro al pasar el mouse */
+    color: white !important; /* Texto blanco */
+}
+
 
 footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 10px;
-    background: #753300;
+    background: #000000;
     color: white;
 }
 
