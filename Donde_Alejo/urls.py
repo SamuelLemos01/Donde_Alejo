@@ -16,7 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
 from dondealejo import views
 
 
@@ -28,15 +27,23 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('menu', views.menu, name='menu'),
-    path('email', views.email, name='email'),
+    path('productos/', views.productos, name='productos'),
+    path('contacto/', views.contacto_view, name='contacto'),
     path('bienvenidos', views.bienvenidos, name='bienvenidos'),
     path('almuerzo', views.almuerzo, name='almuerzo'),
     path('cafeteria', views.cafeteria, name='cafeteria'),
     path('quienes_somos', views.quienes_somos, name='quienes_somos'),
     path('register', views.register, name='register'),
     path('login', views.login, name='login'),
-    path('carrito', views.carrito, name='carrito'),
+    path('restablecer/', views.restablecer, name='restablecer'),
+    path('cambiar_contrasena/<uidb64>/<token>/', views.cambiar_contrasena, name='cambiar_contrasena'),
+    path('confirmacion_contrasena/', views.confirmacion_contrasena, name='confirmacion_contrasena'),
     path('sesion', views.sesion, name='sesion'),
+    path('perfil/', views.perfil, name='perfil'),
+    path('carrito/', views.ver_carrito, name='ver_carrito'),
+    path('carrito/actualizar/<int:item_id>/', views.actualizar_carrito, name='actualizar_carrito'),
+    path('carrito/eliminar/<int:item_id>/', views.eliminar_item, name='eliminar_item'),
+    path('pasarela/', views.pasarela, name='pasarela'),
+    path('confirmacion/<int:orden_id>/', views.confirmacion, name='confirmacion'),
+    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-

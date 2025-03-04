@@ -2,20 +2,27 @@
 {% block title %}Menu{% endblock %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" href="{% static 'style.css' %}">
+<link rel="stylesheet" href="{% static 'style.css'%}">
 <link rel="stylesheet" href="{% static 'menu.css' %}">
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <main>
     <section class="menu-section">
         <div class="menu-items">
-            {% for product in products %}
+            {% for producto in productos %}
                 <div class="menu-item">
-                    <img src="{{ product.imagen.url }}" alt="{{ product.nombre }}">
-                    <h3>{{ product.nombre }}</h3>
-                    <p>{{ product.descripcion }}</p>
-                    <span class="price">${{ product.precio }}</span>
+                    <img src="{{ producto.foto.url }}" alt="{{ producto.nombre }}">
+                    <h3>{{ producto.nombre }}</h3>
+                    <p>{{ producto.descripcion }}</p>
+                    <span class="price">${{ producto.precio }}</span>
                     <br><br>
-                    <button class="boton-item">Agregar al carrito</button>
+                    <form method="POST" action="{% url 'productos' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="producto_id" value="{{ producto.id }}">
+                        <button type="submit" class="btn w-100" style="background-color: var(--acento); color: var(--texto-claro);">
+                            Agregar al carrito
+                        </button>
+                    </form>
+
                 </div>
             {% endfor %}
         </div>

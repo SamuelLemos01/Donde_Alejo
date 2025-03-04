@@ -2,7 +2,7 @@ import logging
 import unicodedata
 
 from django import forms # type: ignore
-from .models import Sugerencia # type: ignore
+
 from django.contrib.auth import authenticate, get_user_model, password_validation # type: ignore
 from django.contrib.auth.hashers import UNUSABLE_PASSWORD_PREFIX, identify_hasher # type: ignore
 from django.contrib.auth.models import User # type: ignore
@@ -612,3 +612,20 @@ class AdminUserCreationForm(SetUnusablePasswordMixin, UserCreationForm):
         self.fields["password2"].required = False
 
 
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+
+class CustomUserCreationForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'username', 'email', 'password', 'password']
+from .models import Orden
+class OrdenForm(forms.ModelForm):
+    class Meta:
+        model = Orden
+        fields = ['nombre', 'email', 'telefono']
+        widgets = {
+            'nombre': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Tu nombre completo'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'tucorreo@ejemplo.com'}),
+            'telefono': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Tu número de teléfono'})
+        }

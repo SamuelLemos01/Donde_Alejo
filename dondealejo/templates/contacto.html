@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'contacto.css' %}">
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+</head>
+
+<body>
+    <div class="contact-container">
+        <br>
+        <h1>Contáctanos</h1>
+        <br>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <br>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+        <br>
+        
+        {% if success %}
+            <p class="success-message">¡Tu sugerencia ha sido enviada exitosamente!</p>
+        {% endif %}
+    </div>
+</body> 
+
+
+
+
+
+
+{% endblock %}

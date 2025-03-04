@@ -132,10 +132,18 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'dondealejo/static')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'carenrojas212005@gmail.com'
-EMAIL_HOST_PASSWORD = 'fvtp ysvw xjut pfyq' 
-EMAIL_USE_TLS = True
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_PORT = 587
+# EMAIL_HOST_USER = 'carenrojas212005@gmail.com'
+# EMAIL_HOST_PASSWORD = 'fvtp ysvw xjut pfyq' 
+# EMAIL_USE_TLS = True
 
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com' 
+EMAIL_PORT = 587  
+EMAIL_USE_TLS = True  
+EMAIL_HOST_USER = 'carenrojas212005@gmail.com' 
+EMAIL_HOST_PASSWORD = 'lewq pwwr lthx tbff' 
+# DEFAULT_FROM_EMAIL = 'carenrojas212005@gmail.com' 

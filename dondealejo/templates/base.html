@@ -1,21 +1,24 @@
+{% load static %} 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} Donde Alejo {% endblock %}</title>
-    {% load static %} 
+    <title>Donde Alejo</title>
+    <link rel="stylesheet" href="{% static 'img/logo2.png' %}" type="">
+   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="npx jsrepo add https://reactbits.dev/default/TextAnimations/SplitText">
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
-<body >
+<body>
     <header class="header">
-        <div class="container header-content">
+        <div class="header-content">
             <div class="logo-texto">
-                <img src="{% static 'img/logo2.png'%}" alt="Restaurante Delicioso" class="logo">
+                <img src="{% static 'img/logo2.png'%}" alt="Restaurante Delicioso" class="logo"> 
                 <h1>Restaurante</h1>  
             </div>
          
@@ -26,18 +29,30 @@
                     <button class="boton">Carta</button>
                     <div class="dropdown-content">
                         <a href="{% url 'almuerzo' %}">Almuerzos</a>
-                        <a href="{% url 'menu' %}">Comidas Rápidas</a>
+                        <a href="{% url 'productos' %}">Comidas Rápidas</a>
                     </div>
                 </div>
                 <li><a href="{% url 'quienes_somos' %}">Quienes somos</a></li> 
                 <!-- <li><a href="receta.html">Receta</a></li>  -->
-                <li><a href="{% url 'email'%}">Sugerencias</a></li> 
+                <li><a href="{% url 'contacto' %}">Contáctanos</a></li> 
 
-                <a href="{% url 'carrito'%}">
-                    <img id="cart-icon" src="{% static 'img/carrito-de-compras.png' %}" alt="">
+                <!-- <a class="usuario" href="{% url 'login'%}">
+                    <img id="cart-icon" src="{% static 'img/usuario.png' %}" alt="">
+                </a> -->
+
+                {% with total_items=request.user.carritoitem_set.count %}
+                {% if total_items > 0 %}
+                <a href="{% url 'ver_carrito' %}" class="icono-login">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge bg-danger">{{ total_items }}</span>
+                </a>
+    
+                {% endif %}
+            {% endwith %}
+                <a class="carrito" href="{% url 'home'%}">
+                    <img id="cart-icon" src="{% static 'img/cerrar.png' %}" alt="">
                 </a>
 
-                <p id="cart-total">{{articulosCarrito }}</p>
                 
             </ul>
         </nav>
